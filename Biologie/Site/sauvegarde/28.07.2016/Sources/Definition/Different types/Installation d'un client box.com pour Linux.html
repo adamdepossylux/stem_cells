@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-fr" dir="ltr" lang="fr-fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon-precomposed" href="http://geekmps.fr/templates/geekmps/images/geekmps-apple-icon_v2.png">
+<meta charset="utf-8">
+<!-- base href="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux" -->
+<meta name="keywords" content="box-linux-sync, client, box.com, linux">
+<meta name="rights" content="Copyright Geekmps">
+<meta name="author" content="Jerome BAPTISTE">
+<meta name="description" content="Depuis le temps que je cherchais un client box.com pour Linux qui fonctionne bien, en voici un avec un petit tuto box-linux-sync">
+<meta name="generator" content="Joomla! - Open Source Content Management">
+<title>Installation d'un client box.com pour Linux</title>
+<link href="http://geekmps.fr/component/jcomments/feed/com_content/476" rel="alternate" type="application/rss+xml" title="Installation d'un client box.com pour Linux">
+<link href="http://geekmps.fr/templates/geekmps/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/e403aa596e587d1de7c85c32555553f6.css">
+<style type="text/css">div.mod_search90 input[type="search"]{width:auto}</style>
+<script src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/ca-pub-3024160161346666.js"></script><script src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/piwik.js" defer="defer" async="" type="text/javascript"></script><script type="application/javascript" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/8ee3b213bb30780226459a16c182cd52.js"></script>
+<script type="text/javascript">jQuery(function($){$(".swipebox").swipebox({hideBarsDelay:3000,videoMaxWidth:1280});});jQuery(window).on('load',function(){new JCaption('img.caption');});jQuery(document).ready(function(){jQuery('.hasTooltip').tooltip({"html":true,"container":"body"});});</script>
+<meta property="og:type" content="article">
+<meta property="article:author" content="Jerome BAPTISTE">
+<meta property="article:published_time" content="2014-02-03 15:37:46">
+<meta property="article:tag" content="box-linux-sync, client, box.com, linux">
+<meta property="og:site_name" content="GeekMPS">
+<meta property="og:title" content="Installation d'un client box.com pour Linux">
+<meta property="og:description" content="Si comme moi vous êtes l’heureux possesseur d’un smartphone Sony ou Sony Ericsson, vous avez peut-être reçu en cadeau (empoissonné) un compte de 50 go sur le site box.com. Malheureusement, il n’existe pas de client officiel pour Linux. Heureusement la communauté est là. Il existe le projet box-linux'&gt;...">
+<meta property="og:url" content="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux">
+<meta property="og:locale" content="fr-fr">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-001-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-004-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-005-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-006-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-007-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-008-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-009-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-010-m.jpg">
+<meta property="og:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-011-m.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:url" content="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux">
+<meta property="twitter:domain" content="http://geekmps.fr">
+<meta property="twitter:site" content="@geekmps">
+<meta property="twitter:title" content="Installation d'un client box.com pour Linux">
+<meta property="twitter:description" content="Si comme moi vous êtes l’heureux possesseur d’un smartphone Sony ou Sony Ericsson, vous avez peut-être reçu en cadeau (empoissonné) un compte de 50 go sur le site box.com. Malheureusement, il n’existe pas de client officiel pour Linux. Heureusement la communauté est là. Il existe le projet box-linux'&gt;...">
+<meta property="twitter:creator" content="@elpioupiou">
+<meta property="twitter:image:src" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-001-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-001-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-004-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-005-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-006-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-007-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-008-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-009-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-010-m.jpg">
+<meta property="twitter:image" content="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-011-m.jpg">
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","name":"Installation d'un client box.com pour Linux","author":{"@type":"Person","name":"Jerome BAPTISTE"},"datePublished":"2014-02-03","image":["http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-001-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-004-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-005-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-006-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-007-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-008-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-009-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-010-m.jpg","http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-011-m.jpg"],"url":"http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux"}</script>
+<style type="text/css">body.site{border-top:3px solid #08c;background-color:#f4f6f7}a{color:#08c}.navbar-inner,.nav-list>.active>a,.nav-list>.active>a:hover,.dropdown-menu li>a:hover,.dropdown-menu .active>a,.dropdown-menu .active>a:hover,.nav-pills>.active>a,.nav-pills>.active>a:hover,.btn-primary{background:#08c}.navbar-inner{-moz-box-shadow:0 1px 3px rgba(0,0,0,.25),inset 0 -1px 0 rgba(0,0,0,.1),inset 0 30px 10px rgba(0,0,0,.2);-webkit-box-shadow:0 1px 3px rgba(0,0,0,.25),inset 0 -1px 0 rgba(0,0,0,.1),inset 0 30px 10px rgba(0,0,0,.2);box-shadow:0 1px 3px rgba(0,0,0,.25),inset 0 -1px 0 rgba(0,0,0,.1),inset 0 30px 10px rgba(0,0,0,.2)}</style>
+<!--[if lt IE 9]>
+			<script src="/media/jui/js/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-156">
+<!-- Body -->
+<div class="navbar navbar-fixed-top navdegrade">
+<div class="container">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://geekmps.fr/"><i class="sprite sprite-geekmps-header-32"></i><span class="minilogo"> GeekMPS</span></a>
+<div class="nav-collapse collapse ">
+<ul class="nav menu nav-pills">
+<li class="item-101"><a href="http://geekmps.fr/" title="Geekmps - Geek Mais Pas Seulement">Accueil</a></li><li class="item-154"><a href="http://geekmps.fr/contact">Contact</a></li><li class="item-155"><a href="http://geekmps.fr/a-propos">A Propos</a></li></ul>
+<div class="searchgeekmps mod_search90">
+<form action="/tutoriaux" method="post" class="form-inline">
+<label for="mod-search-searchword" class="element-invisible">Rechercher</label> <input name="searchword" id="mod-search-searchword" maxlength="200" class="inputbox search-query" size="20" placeholder="Recherche..." type="search">	<input name="task" value="search" type="hidden">
+<input name="option" value="com_search" type="hidden">
+<input name="Itemid" value="156" type="hidden">
+</form>
+</div>
+<div class="custom gmpssocial">
+<div class="badge_social"><i class="suivezmoi">Suivez-moi</i> <a title="Diaspora" href="https://diaspora-fr.org/i/96f40f724fa3" target="_blank"><i class="sprite sprite-Diaspora"> </i></a><a title="Twitter" href="https://twitter.com/geekmps" target="_blank"><i class="sprite sprite-Twitter">&nbsp; </i></a> <a title="Google Plus" href="https://plus.google.com/+GeekmpsFr" target="_blank" rel="publisher"><i class="sprite sprite-Google-plus">&nbsp; </i></a> <a title="Page Facebook" href="https://www.facebook.com/Geekmps" target="_blank"><i class="sprite sprite-Facebook">&nbsp; </i></a> <a title="Page Pinterest" href="http://www.pinterest.com/geekmps/" target="_blank"><i class="sprite sprite-Pinterest">&nbsp; </i></a> <a title="Flux RSS Global" href="http://geekmps.fr/?format=feed&amp;type=rss" target="_blank"><i class="sprite sprite-RSS">&nbsp; </i></a></div></div>
+</div><!--/.nav-collapse -->
+</div>
+</div>
+<!-- Body -->
+<div class="body">
+<div class="container">
+<!-- Header -->
+<header class="header" role="banner">
+<div class="header-inner clearfix">
+<a class="brand pull-left" href="http://geekmps.fr/">
+<div class="site-description">Le site d'un geek Mais Pas Seulement</div>	</a>
+<div class="header-search pull-right">
+</div>
+<div class="clearfix"></div>
+</div>
+</header>
+<div class="row-fluid">
+<main id="content" role="main" class="span8">
+<!-- Begin Content -->
+<div class="moduletable span3">
+<div class="bannergroup">
+	Publicité
+	<div class="banneritem">
+<script async="" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/adsbygoogle.js"></script>
+<!-- Horizontal responsive -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-3024160161346666" data-ad-slot="2162071051" data-ad-format="auto"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:145px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:145px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="600" width="145"></iframe></ins></ins></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>	<div class="clr"></div>
+</div>
+</div>
+</div>
+<div id="system-message-container">
+</div>
+<div class="item-page" itemscope="" itemtype="http://schema.org/Article">
+<meta itemprop="inLanguage" content="fr-FR">
+<div class="page-header">
+<div class="item-corner">
+<div class="published">
+					03 Fév				</div>
+<h1 itemprop="name">
+<a href="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux"> Installation d'un client box.com pour Linux</a>
+</h1>
+</div>
+</div>
+<div class="article-info muted">
+<dl class="article-info">
+<!--	<dt class="article-info-term">Détails</dt>-->
+<dd class="createdby">
+																Écrit par Jerome BAPTISTE									</dd>
+</dl>
+</div>
+<ul class="tags inline">
+<li class="tag-7 tag-list0" itemprop="keywords">
+<a href="http://geekmps.fr/component/tags/tag/7-linux" class="label label-info">
+						Linux					</a>
+</li>
+<li class="tag-337 tag-list1" itemprop="keywords">
+<a href="http://geekmps.fr/component/tags/tag/337-box-com" class="label label-info">
+						box.com					</a>
+</li>
+<li class="tag-338 tag-list2" itemprop="keywords">
+<a href="http://geekmps.fr/component/tags/tag/338-client" class="label label-info">
+						client					</a>
+</li>
+<li class="tag-339 tag-list3" itemprop="keywords">
+<a href="http://geekmps.fr/component/tags/tag/339-disque-virtuel" class="label label-info">
+						disque virtuel					</a>
+</li>
+</ul>
+<div class="pull-left item-image"> <img src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-011-m.jpg" alt="client box.com linux" itemprop="image"> </div>
+<div itemprop="articleBody">
+<p class="c0">Si comme moi vous êtes l’heureux possesseur d’un 
+smartphone Sony ou Sony Ericsson, vous avez peut-être reçu en cadeau 
+(empoissonné) un compte de 50 go sur le site box.com. Malheureusement, 
+il n’existe pas de client officiel pour Linux. Heureusement la 
+communauté est là. Il existe le projet <a href="https://github.com/noiselabs/box-linux-sync" target="_blank"><span class="c4">box-linux-sync</span></a>.
+ Le tout est d’arriver à le mettre en place. J’aurais eu un compte pour 
+Dropbox, je n’aurais pas eu de problèmes, dropox fournissant le client …
+ Je vais donc installer ce client et faire un mémo (réalisé sous XFCE 
+pour le tutot, sous Unity pour la maison).</p>
+<p class="c0">&nbsp;</p>
+<p class="c0 c1">&nbsp;</p>
+<h2 class="c0"><a name="h.pvhiugjvcenz"></a>Installation du pré-requis</h2>
+<p class="c0">La première chose à faire est d'ouvrir un terminal pour 
+ajouter les pré-requis à son Ubuntu (13.10 Dans mon cas). En fait, il 
+n'y en aura qu'un seul, et en plus, il pourra servir pour d'autre 
+programme comme Owncloud. Pour cela on va ouvrir un Terminal (ctrl + alt
+ + T) et entrer la ligne suivante.</p>
+<p class="c0"><span style="color: #800080; font-family: 'courier new', courier;">sudo apt-get install davfs2</span></p>
+<p class="c0">Cela sert uniquement à implémenter le protocole DAV vers File Système (traduction personnelle)</p>
+<p class="c1 c0">&nbsp;</p>
+<p class="c0">Ensuite, il va falloir se créer un petit répertoire pour récupérer les sources du projet.</p>
+<p class="c0">Personnellement je place tout ce genre de programme dans 
+/home/xxxx/programmes (remplacer xxx par votre user, dans mon cas 
+jbaptiste)</p>
+<h2 class="c0"><a name="h.zba394kfvnlc"></a>Installation de Box Linux Sync</h2>
+<p class="c0">Une fois créé, je vais dans mon répertoire "programmes" et j'entre la commande suivante</p>
+<p class="c0"><span style="color: #800080; font-family: 'courier new', courier;">git clone git://github.com/noiselabs/box-linux-sync.git</span></p>
+<p class="c0">Cette commande va faire une copie du dépôt Git du projet (en clair récupérer les sources )</p>
+<p class="c1 c0">&nbsp;</p>
+<p class="c0">Je vais dans le répertoire ~/programmes/box-linux-sync/bin avec la commande suivante:</p>
+<p class="c0"><span style="font-family: 'courier new', courier; color: #800080;">cd ~/programmes/box-linux-sync/bin</span></p>
+<p class="c0">et je lance la commande suivante :</p>
+<p class="c0"><span style="color: #800080; font-family: 'courier new', courier;">./box-sync check &amp;&amp; ./box-sync setup</span></p>
+<p class="c0">Cela va générer certaine opération comme ajouter votre user au groupe davfs2</p>
+<p class="c1 c0">&nbsp;</p>
+<p class="c0">Ensuite, va encore falloir user de la ligne de commande pour la connexion</p>
+<p class="c0">Il va falloir éditer le fichier ~/.davfs2/secrets pour ajouter une ligne du type</p>
+<p class="c0"><span style="font-family: 'courier new', courier;">https://dav.box.com/dav <span id="cloak29576"><a href="mailto:me@example.com">me@example.com</a></span><script type="text/javascript">document.getElementById('cloak29576').innerHTML='';var prefix='&#109;a'+'i&#108;'+'&#116;o';var path='hr'+'ef'+'=';var addy29576='m&#101;'+'&#64;';addy29576=addy29576+'&#101;x&#97;mpl&#101;'+'&#46;'+'c&#111;m';var addy_text29576='m&#101;'+'&#64;'+'&#101;x&#97;mpl&#101;'+'&#46;'+'c&#111;m';document.getElementById('cloak29576').innerHTML+='<a '+path+'\''+prefix+':'+addy29576+'\'>'+addy_text29576+'<\/a>';</script> mypassword</span></p>
+<p class="c0"><span style="font-family: 'courier new', courier;">N'oubliez pas d'enlever le # devant la ligne (# = commentaire)</span></p>
+<p class="c1 c0">&nbsp;</p>
+<p class="c0">Si vous voulez un montage d'un disque virtuel vers box au démarrage de votre linux vous pouvez éditer le fichier /etc/fstab</p>
+<p class="c0">Ajouter un ligne du type</p>
+<p class="c0"><span style="font-family: 'courier new', courier; color: #800080;">https://dav.box.com/dav /home/jbaptiste/Box davfs rw,user,noauto 0 0</span></p>
+<p class="c0">remplacer le jbaptiste par votre user</p>
+<p class="c1 c0">&nbsp;Maintenant il est conseillé de configurer le 
+répertoire où seront stockés vos fichiers pour cela il faut éditer le 
+fichier ~/.noiselabs/box/box-sync.cfg</p>
+<p class="c0">Personnellement, j'ai laissé le répertoire par défaut qui me convenait parfaitement. Je n'ai donc rien configuré.</p>
+<h2 class="c0"><a name="h.m5n53p930wau"></a>Un petit souci, un problème</h2>
+<p class="c1 c0">J'ai juste eu un petit souci de mot de passe. 
+Habituellement je me connecte avec mon user Gmail et il se trouve que le
+ user déclaré dans box.com est le même mais avec un mot de passe 
+différent !! On peut le ré-initialiser au besoin. </p>
+<p class="c0">Si par hasard le lecteur Box ne veut pas se monter, 
+utilisez la ligne de commande suivante (c'est un peu bourrin mais 
+tellement efficace)</p>
+<p class="c0"><span style="color: #800080; font-family: 'courier new', courier;">sudo chmod u+s /sbin/mount.davfs</span></p>
+<p class="c0">Je vous conseille également de passer le répertoire box en
+ chmod 777 box (ce n'est pas obligatoire, mais simplifie grandement les 
+opérations mais supprime la sécurité de vos données)</p>
+<p class="c1 c0">&nbsp;</p>
+<h2 class="c0"><a name="h.ie9ghwomn5ws"></a>Quelques tests.</h2>
+<p class="c0">J'ai crée un fichier dans le répertoire Box de mon Linux 
+(test.html). Le fichier a quasi été synchronisé en direct (de l'ordre de
+ 2 secondes peut être moins).</p>
+<p class="c0">J'ai créé un fichier à partir de LibreOffice Writer 
+sauvegardé dans le répertoire Box. Le fichier temporaire a été créer 
+dans box.com. Je n'ai pas noté de réels ralentissements lors ce test 
+rapide</p>
+<p class="c0">Les fichiers.odt sont lisibles , mais sous Linux pas question de les éditer.</p>
+<p class="c0">Je n'ai pas testé de synchroniser plusieurs comptes box.com ...</p>
+<p class="c1 c0">&nbsp;</p>
+<h2 class="c0"><a name="h.mejsuwxem0qc"></a>Conclusion</h2>
+<p class="c0">Le client fonctionne parfaitement bien. L'installation 
+mériterait peut-être un petit.deb pour faciliter la vie du plus grand 
+nombre. Une fois cette étape réalisée ce n'est que du bonheur. Je n'ai 
+pas noté de ralentissements. Si je ne suis pas content, je démonte le 
+lecteur Box et puis c'est tout. Bref assez content, car je vais pouvoir 
+peut être me séparer un peu de Google Drive et avoir un vrai éditeur de 
+texte bien complet.</p>
+<h2 class="c0"><a name="h.1krh2ajvcqpx"></a>Capture d’écran</h2>
+<p class="c0 c3" style="text-align: center;"><a class="swipebox" title="Client box.com pour Linux (ubuntu) 001" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-001.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 001" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-001-m.jpg" alt="box linux sync 001" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 002" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-002.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 002" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-002-m.jpg" alt="box linux sync 002" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 003" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-003.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 003" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-003-m.jpg" alt="box linux sync 003" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 004" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-004.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 004" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-004-m.jpg" alt="box linux sync 004" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 005" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-005.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 005" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-005-m.jpg" alt="box linux sync 005" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 006" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-006.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 006" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-006-m.jpg" alt="box linux sync 006" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 007" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-007.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 007" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-007-m.jpg" alt="box linux sync 007" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 008" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-008.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 008" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-008-m.jpg" alt="box linux sync 008" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 009" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-009.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 009" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-009-m.jpg" alt="box linux sync 009" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 010" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-010.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 010" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-010-m.jpg" alt="box linux sync 010" border="0"></a> <a class="swipebox" title="Client box.com pour Linux (ubuntu) 011" href="http://geekmps.fr/images/linux/box-com/box-com-install-client-linux-geekmps-011.jpg" rel="gal"><img style="margin: 10px;" title="Un Client box.com pour ubuntu et Linux 011" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/box-com-install-client-linux-geekmps-011-m.jpg" alt="box linux sync 011" border="0"></a> &nbsp;</p><div><br><div><p><i>Vous avez aimé cet article ? Alors partagez-le avec vos amis en cliquant sur les boutons ci-dessous :</i><br></p></div><div> <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux&amp;text=Installation%20d%27un%20client%20box.com%20pour%20Linux:%20Depuis%20le%20temps%20que%20je%20cherchais%20un%20client%20box.com%20pour%20...%20&amp;via=geekmps" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"><i class="sprite sprite-Twitter" title="twitter social link">&nbsp; </i></a> <a target="_blank" class="" title="Facebook" href="https://www.facebook.com/sharer.php?u=http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux&amp;t=Installation%20d%27un%20client%20box.com%20pour%20Linux:%20Depuis%20le%20temps%20que%20je%20cherchais%20un%20client%20box.com%20pour%20Linux%20qui%20fonctionne%20bien,%20en%20voici%20un%20avec%20un%20petit%20tuto%20box-linux-sync" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"><i class="sprite sprite-Facebook" title="share on facebook ">&nbsp; </i></a> <a target="_blank" title="Google +" href="https://plus.google.com/share?url=http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux&amp;hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><i class="sprite sprite-Google-plus" title="share on Google+">&nbsp; </i></a> <a target="_blank" href="https://getpocket.com/save" data-lang="en" data-save-url="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux" data-pocket-count="none"><i class="sprite sprite-Pocket" title="share on Pocket">&nbsp; </i></a></div><br></div>	</div>
+<ul class="pager pagenav">
+<li class="previous">
+<a href="http://geekmps.fr/tutoriaux/480-supprimer-un-objet-d-une-photo-avec-gimp-et-g-mic" rel="prev">
+<span class="icon-chevron-left"></span> Précédent		</a>
+</li>
+<li class="next">
+<a href="http://geekmps.fr/tutoriaux/464-convertir-une-video-pour-storio-2-vtech" rel="next">
+			Suivant <span class="icon-chevron-right"></span>	</a>
+</li>
+</ul>
+<script type="text/javascript">var jcomments=new JComments(476,'com_content','/component/jcomments/');jcomments.setList('comments-list');</script>
+<div id="jc">
+<div id="comments"><h4>Commentaires <a class="rss" href="http://geekmps.fr/component/jcomments/feed/com_content/476" title="S’abonner au flux RSS pour les commentaires de cet article." target="_blank">&nbsp;</a><a class="refresh" href="#" title="Rafraîchir la liste des commentaires" onclick="jcomments.showPage(476,'com_content',0);return false;">&nbsp;</a></h4>
+<div class="comments-list" id="comments-list-0">
+		<div class="even" id="comment-item-512">
+<div class="rbox">
+<div class="comment-avatar"><img src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/6c102db9cc3af4f028b961b95ac9fb28.png" alt="Antoine"></div>
+<div class="comment-box avatar-indent">
+<span class="comments-vote">
+	<span id="comment-vote-holder-512">
+<a href="#" class="vote-good" title="Excellent commentaire !" onclick="jcomments.voteComment(512, 1);return false;"></a><a href="#" class="vote-poor" title="Commentaire pitoyable !" onclick="jcomments.voteComment(512, -1);return false;"></a>
+<span class="vote-none">0</span>
+	</span>
+</span>
+<a class="comment-anchor" href="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux#comment-512" id="comment-512">#</a>
+<span class="comment-author">Antoine</span>
+<span class="comment-date">04-11-2015 12:57</span>
+<div class="comment-body" id="comment-body-512">Bonjour,<br>Merci pour ce tuto. J'ai suivi toutes les étapes, installation réussie sur Ubuntu 14.04<br>Antoine</div>
+<span class="comments-buttons">
+<a href="#" onclick="jcomments.showReply(512); return false;">Répondre</a>
+ | <a href="#" onclick="jcomments.showReply(512,1); return false;">Répondre en citant</a> | 
+<a href="#" onclick="jcomments.quoteComment(512); return false;">Citer</a>
+</span>
+</div><div class="clear"></div>
+</div>
+		</div>
+		<div class="odd" id="comment-item-334">
+<div class="rbox">
+<div class="comment-box">
+<a class="comment-anchor" href="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux#comment-334" id="comment-334">#</a>
+<span class="comment-author">Guest</span>
+<span class="comment-date">01-02-2015 00:22</span>
+<div class="comment-body" id="comment-body-334">Ce commentaire a été supprimé par l’administrateu<span style="font-size:0;padding:0;margin:0;"> </span>r</div>
+</div><div class="clear"></div>
+</div>
+		</div>
+		<div class="even" id="comment-item-152">
+<div class="rbox">
+<div class="comment-avatar"><img src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/51b04ede38b527fbb5f2de09ff584141.png" alt="syntaxeror"></div>
+<div class="comment-box avatar-indent">
+<span class="comments-vote">
+	<span id="comment-vote-holder-152">
+<a href="#" class="vote-good" title="Excellent commentaire !" onclick="jcomments.voteComment(152, 1);return false;"></a><a href="#" class="vote-poor" title="Commentaire pitoyable !" onclick="jcomments.voteComment(152, -1);return false;"></a>
+<span class="vote-none">0</span>
+	</span>
+</span>
+<a class="comment-anchor" href="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux#comment-152" id="comment-152">#</a>
+<span class="comment-author">syntaxeror</span>
+<span class="comment-date">24-04-2014 12:45</span>
+<div class="comment-body" id="comment-body-152"><p>Bonjour<br>super article bien expliqué.<br>Y a t-il une procédure pour le supprimer proprement</p></div>
+<span class="comments-buttons">
+<a href="#" onclick="jcomments.showReply(152); return false;">Répondre</a>
+ | <a href="#" onclick="jcomments.showReply(152,1); return false;">Répondre en citant</a> | 
+<a href="#" onclick="jcomments.quoteComment(152); return false;">Citer</a>
+</span>
+</div><div class="clear"></div>
+</div>
+	</div>
+	<div class="comments-list" id="comments-list-152">
+		<div class="odd" id="comment-item-390">
+<div class="rbox">
+<div class="comment-avatar"><img src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/f77eeacd89643dee5750dc748e7d8c89.png" alt="Jerome BAPTISTE"></div>
+<div class="comment-box avatar-indent">
+<span class="comments-vote">
+	<span id="comment-vote-holder-390">
+<a href="#" class="vote-good" title="Excellent commentaire !" onclick="jcomments.voteComment(390, 1);return false;"></a><a href="#" class="vote-poor" title="Commentaire pitoyable !" onclick="jcomments.voteComment(390, -1);return false;"></a>
+<span class="vote-none">0</span>
+	</span>
+</span>
+<a class="comment-anchor" href="http://geekmps.fr/tutoriaux/476-installation-d-un-client-box-com-pour-linux#comment-390" id="comment-390">#</a>
+<span class="comment-author">Jerome BAPTISTE</span>
+<span class="comment-date">21-05-2015 10:38</span>
+<div class="comment-body" id="comment-body-390">Avec 1 an de retard, oui
+ il y a bien une procédure pour supprimer proprement. Elle consiste à 
+entrer la commande suivante dans une terminal ...<br>./box-sync uninstall &amp;&amp; rm ~/path/to/box-l<span style="font-size:0;padding:0;margin:0;"> </span>inux-sync <br>Ne pas oublier de remplacer ~/path/to/ par le répertoire où vous avez mis le client box</div>
+<span class="comments-buttons">
+<a href="#" onclick="jcomments.showReply(390); return false;">Répondre</a>
+ | <a href="#" onclick="jcomments.showReply(390,1); return false;">Répondre en citant</a> | 
+<a href="#" onclick="jcomments.quoteComment(390); return false;">Citer</a>
+</span>
+</div><div class="clear"></div>
+</div>
+		</div>
+	</div>
+</div>
+<div id="comments-list-footer"><a class="refresh" href="#" title="Rafraîchir la liste des commentaires" onclick="jcomments.showPage(476,'com_content',0);return false;">Rafraîchir la liste des commentaires</a><br><a class="rss" href="http://geekmps.fr/component/jcomments/feed/com_content/476" title="S’abonner au flux RSS pour les commentaires de cet article." target="_blank">S’abonner au flux RSS pour les commentaires de cet article.</a></div>
+</div>
+<h4>Ajouter un Commentaire</h4>
+<a id="addcomments" href="#addcomments"></a>
+<form id="comments-form" name="comments-form" action="javascript:void(null);">
+<div class="span4">
+<input id="comments-form-name" name="name" maxlength="30" type="text">
+<label for="comments-form-name">Nom (obligatoire)</label>
+</div>
+<div class="span4">
+<input id="comments-form-email" name="email" size="22" tabindex="2" type="text">
+<label for="comments-form-email">Adresse email (obligatoire)</label>
+</div>
+<div class="span4">
+<input id="comments-form-homepage" name="homepage" size="22" tabindex="3" type="text">
+<label for="comments-form-homepage">Url de votre site Web ou Blog</label>
+</div>
+<div class="span12">
+<span style="display: block;" class="bbcode"><a class="bbcode-b" title="Gras" id="bbcode-b" href="#" style="display: block;"></a><a class="bbcode-url" title="Insérer un lien" id="bbcode-url" href="#" style="display: block;"></a><a class="bbcode-quote" title="Ajouter la balise de Citation [QUOTE]" id="bbcode-quote" href="#" style="display: block;"></a><a class="bbcode-youtube" title="YouTube Video" id="custombbcode1" href="#" style="display: block;"></a><a class="bbcode-wiki" title="Wikipedia" id="custombbcode10" href="#" style="display: block;"></a></span><textarea id="comments-form-comment" name="comment" cols="65" rows="8" class="span12"></textarea><div class="grippie"><span class="counter"> <span>4000</span>  Caractères restants</span></div>
+</div>
+<div class="span12">
+<input class="checkbox" id="comments-form-subscribe" name="subscribe" value="1" tabindex="5" type="checkbox">
+<label for="comments-form-subscribe">Recevoir une notification par email lorsqu’une réponse est postée</label><br>
+</div>
+<div class="span12">
+<img class="captcha" onclick="jcomments.clear('captcha');" id="comments-form-captcha-image" src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/54334.jpeg" alt="Code de sécurité" height="60" width="121"><br>
+<span class="captcha" onclick="jcomments.clear('captcha');">Rafraîchir</span><br>
+<input class="captcha" id="comments-form-captcha" name="captcha_refid" size="5" tabindex="6" type="text"><br>
+</div>
+<div id="comments-form-buttons" class="span12">
+<div class="btn" id="comments-form-send"><div><a href="#" tabindex="7" onclick="jcomments.saveComment();return false;" title="Enregistrer (ctrl+entrée)">Enregistrer</a></div></div>
+<div class="btn" id="comments-form-cancel" style="display:none;"><div><a href="#" tabindex="8" onclick="return false;" title="Annuler">Annuler</a></div></div>
+<div style="clear:both;"></div>
+</div>
+<div class="span12">
+<input name="object_id" value="476" type="hidden">
+<input name="object_group" value="com_content" type="hidden">
+</div>
+</form>
+<div style="clear:both;"></div>
+<script type="text/javascript">function JCommentsInitializeForm()
+{var jcEditor=new JCommentsEditor('comments-form-comment',true);jcEditor.addButton('b','Gras','Saisissez votre message :');jcEditor.addButton('url','Insérer un lien','Saisissez l’url :');jcEditor.addButton('quote','Ajouter la balise de Citation [QUOTE]','Saisissez le texte à citer :');jcEditor.addButton('custombbcode1','YouTube Video','Saisissez votre message :','[youtube]','[/youtube]','bbcode-youtube','');jcEditor.addButton('custombbcode10','Wikipedia','Saisissez votre message :','[wiki]','[/wiki]','bbcode-wiki','');jcEditor.addCounter(4000,'',' Caractères restants','counter');jcomments.setForm(new JCommentsForm('comments-form',jcEditor));}
+if(window.addEventListener){window.addEventListener('load',JCommentsInitializeForm,false);}
+else if(document.addEventListener){document.addEventListener('load',JCommentsInitializeForm,false);}
+else if(window.attachEvent){window.attachEvent('onload',JCommentsInitializeForm);}
+else{if(typeof window.onload=='function'){var oldload=window.onload;window.onload=function(){oldload();JCommentsInitializeForm();}}else window.onload=JCommentsInitializeForm;}</script>
+<div id="comments-footer" align="center"><a href="http://www.joomlatune.com/" title="JComments" target="_blank">JComments</a></div>
+<script type="text/javascript">jcomments.setAntiCache(1,1,0);</script>
+</div> </div>
+<ul itemscope="" itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+<li>
+			Vous êtes ici : &nbsp;
+		</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a itemprop="item" href="http://geekmps.fr/" class="pathway"><span itemprop="name">Home</span></a>
+<span class="divider">
+<img src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/arrow.png" alt="">	</span>
+<meta itemprop="position" content="1">
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a itemprop="item" href="http://geekmps.fr/tutoriaux" class="pathway"><span itemprop="name">Tutoriaux</span></a>
+<span class="divider">
+<img src="Installation%20d%27un%20client%20box.com%20pour%20Linux_fichiers/arrow.png" alt="">	</span>
+<meta itemprop="position" content="2">
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="active">
+<span itemprop="name">
+					Owncloud 7 install chez o2Switch				</span>
+<meta itemprop="position" content="3">
+</li>
+</ul>
+<!-- End Content -->
+</main>
+<aside id="aside" class="span4">
+<!-- Begin Right Sidebar -->
+<div class="well "><ul class="nav menu">
+<li class="item-150"><a href="http://geekmps.fr/geeks">Geeks</a></li><li class="item-151"><a href="http://geekmps.fr/linux-categorie">Linux</a></li><li class="item-152"><a href="http://geekmps.fr/musique-categorie">Musique</a></li><li class="item-153"><a href="http://geekmps.fr/fourre-tout">Fourre Tout</a></li><li class="item-158"><a href="http://geekmps.fr/recette-cuisine">Recette - Cuisine</a></li><li class="item-156 current active"><a href="http://geekmps.fr/tutoriaux">Tutoriaux</a></li><li class="item-180"><a href="http://geekmps.fr/tests">Tests</a></li><li class="item-165"><a href="http://geekmps.fr/plan-du-site">Plan Du Site</a></li><li class="item-269"><a href="http://geekmps.fr/liens">Liens</a></li></ul>
+</div><div class="well "><h3 class="page-header">Derniers Articles</h3><ul class="latestnews">
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/linux-categorie/904-linux-et-ses-applications-sous-windows-mouai-quicky" itemprop="url">
+<span itemprop="name">
+				Linux et ses applications sous Windows ... mouai (quicky)			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/geeks/903-quand-ton-operateur-accepte-de-payer-sans-rien-demander" itemprop="url">
+<span itemprop="name">
+				Quand ton opérateur accepte de payer sans rien demander			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/tests/902-test-du-clavier-bluetooth-iclever-leger-et-efficace" itemprop="url">
+<span itemprop="name">
+				Test du clavier Bluetooth Iclever, léger et efficace			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/fourre-tout/901-la-vie-d-un-blogueur-debutant" itemprop="url">
+<span itemprop="name">
+				La vie d'un blogueur débutant, retour d'expérience après 4 ans			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/tutoriaux/27-papa-blogueur/900-digikid-2-ieme-edition-a-l-ecole-superieure-du-digital" itemprop="url">
+<span itemprop="name">
+				Digikid, 2 ieme édition à l'Ecole Supérieure du Digital			</span>
+</a>
+</li>
+</ul>
+</div><div class="well "><div class="bannergroup">
+<label>Publicité</label>
+</div>
+</div><div class="well "><h3 class="page-header">Derniers Commentaires</h3><ul class="jcomments-latest">
+<li>
+<span class="author">Jérôme Baptiste</span>
+<div class="comment rounded ">
+<div>
+				Probablement un coton tige ou une barrette qui bloque. Il faut essayer de tourner dans un sens puis dans ...								<p class="jcomments-latest-readmore">
+<a href="http://geekmps.fr/fourre-tout/411-machine-a-laver-laden-nettoyage-filtre#comment-633">Lire la suite...</a>
+</p>
+</div>
+</div>
+<span class="comment-separator">&nbsp;</span>
+</li>
+<li>
+<span class="author">youssof</span>
+<div class="comment rounded ">
+<div>
+				Je n'arrive pas a enlever le filtre de la machine comment faire svp ?								<p class="jcomments-latest-readmore">
+<a href="http://geekmps.fr/fourre-tout/411-machine-a-laver-laden-nettoyage-filtre#comment-632">Lire la suite...</a>
+</p>
+</div>
+</div>
+<span class="comment-separator">&nbsp;</span>
+</li>
+<li>
+<span class="author">Jerome BAPTISTE</span>
+<div class="comment rounded ">
+<div>
+				Merci beaucoup Thomas, j'ai corrigé								<p class="jcomments-latest-readmore">
+<a href="http://geekmps.fr/tutoriaux/516-optimiser-images-jpeg-et-png-pour-le-web#comment-631">Lire la suite...</a>
+</p>
+</div>
+</div>
+<span class="comment-separator">&nbsp;</span>
+</li>
+<li>
+<span class="author">thomas</span>
+<div class="comment rounded ">
+<div>
+				Merci pour les astuces, mais il manque un - à la commande: find . -type f -name "*.jpg" -exec jpegoptim ...								<p class="jcomments-latest-readmore">
+<a href="http://geekmps.fr/tutoriaux/516-optimiser-images-jpeg-et-png-pour-le-web#comment-630">Lire la suite...</a>
+</p>
+</div>
+</div>
+</li>
+</ul>
+</div><div class="well "><h3 class="page-header">Articles les plus lus</h3><ul class="mostread">
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/tests/354-pentax-k-50-canon-eos-100d-ou-nikon-d5200" itemprop="url">
+<span itemprop="name">
+				Pentax K-50, Canon EOS 100D ou Nikon D5200 ?			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/fourre-tout/83-comment-france-telecom-nous-prend-pour-des-cons" itemprop="url">
+<span itemprop="name">
+				Comment France Telecom et free nous prend pour des cons			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/tests/417-madbid-com-trop-beau-pour-etre-vrai" itemprop="url">
+<span itemprop="name">
+				Madbid.com trop beau pour être vrai			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/linux-categorie/290-choisir-sa-distribution-linux-en-ce-debut-2013" itemprop="url">
+<span itemprop="name">
+				Choisir sa distribution linux en ce début 2013			</span>
+</a>
+</li>
+<li itemscope="" itemtype="https://schema.org/Article">
+<a href="http://geekmps.fr/tutoriaux/426-coup-de-gueule-contre-les-constructeurs-auto-changer-ampoule" itemprop="url">
+<span itemprop="name">
+				Coup de gueule contre les constructeurs auto (changer ampoule)			</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- End Right Sidebar -->
+</aside>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+<div class="container">
+<hr>
+<ul class="weblinks">
+<li>
+<a href="https://twitter.com/#%21/geekmps" rel="follow">Twitter</a>	</li>
+<li>
+<a href="https://plus.google.com/u/0/113577100760610087680/posts" rel="follow">Google+</a>	</li>
+<li>
+<a href="https://www.facebook.com/Geekmps" rel="follow">Facebook</a>	</li>
+<li>
+<a href="http://geekmps.fr/recette-cuisine/2-non-categorise/298-reference-annuaire" rel="follow">Annuaires</a>	</li>
+</ul>
+<p class="pull-right"><a href="#top" id="back-top">Aller en Haut</a></p>
+<p>© GeekMPS 2016</p>
+</div>
+</footer>
+<!-- Piwik -->
+<script type="text/javascript">var _paq=_paq||[];_paq.push(["setDomains",["*.geekmps.fr"]]);_paq.push(["setDoNotTrack",true]);_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function(){var u="//geekmps.fr/piwik/";_paq.push(['setTrackerUrl',u+'piwik.php']);_paq.push(['setSiteId',1]);var d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.type='text/javascript';g.async=true;g.defer=true;g.src=u+'piwik.js';s.parentNode.insertBefore(g,s);})();</script>
+<noscript><p><!-- Piwik Image Tracker-->
+<img src="https://geekmps.fr/piwik/piwik.php?idsite=1&rec=1" style="border:0" alt="" />
+<!-- End Piwik --></p></noscript>
+<!-- End Piwik Code -->
+<!--googleoff: all--><div class="cadre_alert_cookies" id="cadre_alert_cookies" style="opacity:1;text-align:center;position:fixed;z-index:10000;left: 0;right: 0;bottom: 0; margin:0px;"><div class="cadre_inner_alert_cookies" style="display: inline-block;width: 100%;margin:auto;max-width:100%;background-color: #ffffff;border: 0px solid #eeeeee;"><div class="cadre_inner_texte_alert_cookies" style="display: inline-block;padding:10px;color: #666666"><div class="cadre_texte "><p>La
+ pub ça rapporte pas grand chose,&nbsp;en plus ça vous laisse 
+d'horribles cookies non comestibles, autrement appelé trackers. Ce 
+cookie est utilisé par DoubleClick (Google Adsense). Vous avez tout le 
+droit de ne pas en vouloir et donc quitter cet excellent blog. Dans le 
+cas contraire, vous l'acceptez et vous poursuivez le surf en toute 
+connaissance de cause (par ailleurs j'utilise <a href="http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/" target="_blank" rel="alternate">piwik</a>).</p></div><div class="cadre_bouton "><div class=" col-md-6 col-sm-6 btn_close" style="margin:5px 0;text-align:center"><button onclick="CloseCadreAlertCookie();" style="color:#eeeeee" class="btn btn-warning  popup-modal-dismiss">Fermer</button></div><div class=" col-md-6 col-sm-6 btn_readmore" style="margin:5px 0;text-align:center"><a style="color:#eeeeee" class="btn btn-inverse  read_more" href="http://geekmps.fr/a-propos#cookies">En Savoir Plus (marche pas)</a></div></div></div></div></div><!--googleon: all--><script type="text/javascript">var name="fmalertcookies"+"=";var ca=document.cookie.split(";");for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==" ")c=c.substring(1);if(c.indexOf(name)==0){document.getElementById("cadre_alert_cookies").style.display="none";}}var d=new Date();d.setTime(d.getTime()+(30*(24*60*60*1000)));var expires_cookie="expires="+d.toUTCString();function CloseCadreAlertCookie(){document.getElementById('cadre_alert_cookies').style.display='none';document.cookie='fmalertcookies=true; '+expires_cookie+'; path=/';}</script>
+</body></html>

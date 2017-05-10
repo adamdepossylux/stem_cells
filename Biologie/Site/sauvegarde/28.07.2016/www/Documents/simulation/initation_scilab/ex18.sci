@@ -1,0 +1,7 @@
+x=linspace(-2,2,101)
+plot2d(x,-x.^2)
+plot2d(x,exp(-x.^2),4)
+plot2d(x,-x.^2,-3)
+plot2d(x,exp(-x.^2),5)
+legend('x','exp(-x^2)')
+title('exp(-x^2)')

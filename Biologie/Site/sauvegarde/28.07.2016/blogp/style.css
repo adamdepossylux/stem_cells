@@ -1,0 +1,262 @@
+h1
+{
+	color:white;
+	font-size: xx-large;
+	font-family: "LearningCurveProRegular","Comic Sans MS", "Trebuchet MS",sans-serif;
+	text-align: center;
+	margin: auto;
+}
+
+h2
+{
+	color:lime;
+	font-size: x-large;
+	font-family: "Comic Sans MS", "Trebuchet MS",sans-serif;
+	text-align: center;
+	Line-Height: 2;
+}
+
+h3
+{
+	color:maroon;
+	font-size: x-large;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 95%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+
+h5
+{
+	color:navy;
+	font-size: medium;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 80%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+h4
+{
+	color:blue;
+	font-size: large;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 90%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+p
+{
+	font-size: medium;
+	font-family:Arial,sans-serif;
+	text-align: justify;
+	width: 98%;
+	margin: auto;
+	Line-Height: 1.2;
+}
+
+strong
+{
+	font-weight: bold;
+	text-align: justify;
+}
+
+span
+{
+	font-family: Georgia,sans-serif;
+	color:blue;
+	font-size: medium;
+	font-weight: bold;
+}
+
+a
+{
+	text-decoration: none;
+	color:olive;
+	text-align: justify;
+}
+
+
+body
+{
+	background: url("images/stem-cell-11.jpg") fixed;
+	background-size:cover;
+	margin:auto;
+}
+
+ul
+{
+	font-size: medium;
+	font-family:Arial,sans-serif;
+	text-align: justify;
+	margin:auto;
+}
+
+nav
+{
+	background: silver; 
+	text-align: center; 
+	margin:auto;
+}
+
+div
+{
+	background:white;
+	margin:auto;
+	border-radius: 50px;
+	width: 90%;
+}
+#conteneur
+{
+	display: flex;
+	flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+	height: 50px;
+}
+
+#bloc_footer
+{
+	display: flex;
+    justify-content: space-around;
+	height: 20px;
+}
+
+#conteneur_fr
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:nowrap;
+	height: 30px;
+}
+
+.imageflottante
+{
+	float:left;
+}
+
+footer div
+{
+	background-color: transparent;
+	width:8%;
+	text-align:left;
+	border-radius: 2px;
+	margin-left: 20px;
+	border-radius: 2px;
+	min-width: 100px;
+}
+
+footer div2 
+{
+	background: green;  
+	font-size:12px; 
+	margin-right: 20px;
+	border-radius: 2px;
+	width:40px;
+}
+
+footer div2 a
+{
+	color:black;
+	text-decoration: none;
+	text-align: right;
+	font-size: small;
+}
+
+script
+{
+	text-align:right; 
+	font-size:5px;
+}
+
+footer
+{
+	background-color: lightblue;
+	position: fixed;
+	bottom:0;
+	width:100%;
+}
+
+@font-face { /* Définition d'une nouvelle police nommée LearningCurveProRegular */
+    font-family: 'LearningCurveProRegular';
+    src: url('LearningCurve_OT-webfont.eot');
+    src: url('LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LearningCurve_OT-webfont.woff') format('woff'),
+         url('LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');
+}
+
+header
+{
+
+	background:url("images/090f640f5ecb607d3227ed8dd52b79f0_large - copy.jpeg") no-repeat top;
+	height:200px;
+	line-height: 200px;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+@media votre requete ici {
+
+img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+    max-width: 100%;
+
+}
+
+body
+{
+	    margin: 0;
+
+}
+
+#bloc_page
+{
+    max-width: 900px;
+    margin: auto;
+    min-width: 320px;
+}
+
+
+#conteneur
+{
+	display: flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+	height: 50px;
+}
+
+#conteneur_fr
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:nowrap;
+	align-items: center;
+	height: 30px;
+}
+
+#bloc_footer
+{
+	display: flex;
+    justify-content: space-around;
+	height: 30px;
+}
+
+body
+{
+	background: url("images/stem-cell-11.jpg") fixed;
+	background-size:cover;
+	margin:auto;
+	max-width: 480px;
+}
+
+}

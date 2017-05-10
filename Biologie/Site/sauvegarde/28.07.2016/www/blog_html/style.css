@@ -1,0 +1,137 @@
+h1
+{
+	color:white;
+	font-size: xx-large;
+	font-family: "LearningCurveProRegular","Comic Sans MS", "Trebuchet MS",sans-serif;
+	text-align: center;
+	margin: auto;
+}
+
+h2
+{
+	color:lime;
+	font-size: xx-large;
+	font-family: "Comic Sans MS", "Trebuchet MS",sans-serif;
+	text-align: center;
+	Line-Height: 2;
+}
+
+h3
+{
+	color:maroon;
+	font-size: x-large;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 95%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+h4
+{
+	color:blue;
+	font-size: large;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 90%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+h5
+{
+	color:navy;
+	font-size: medium;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 80%;
+	margin:auto;
+}
+
+p
+{
+	font-size: medium;
+	font-family:Arial,sans-serif;
+	text-align: justify;
+	width: 98%;
+	margin: auto;
+	Line-Height: 1.2;
+}
+
+strong
+{
+	font-weight: bold;
+	text-align: justify;
+}
+
+a
+{
+	text-decoration: none;
+	color:olive;
+	text-align: justify;
+}
+
+
+body
+{
+	background: url("images/stem-cell-11.jpg") fixed;
+	margin:auto;
+	min-width: 1000px;
+
+}
+
+ul
+{
+	font-size: small;
+	font-family:Arial,sans-serif;
+	text-align: justify;
+}
+
+div
+{
+	background:white;
+	margin:auto;
+	border-radius: 50px;
+	width: 90%;
+}
+
+
+#conteneur
+{
+	display: flex;
+	flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+	height: 50px;
+	margin:auto;
+}
+
+@font-face { /* Définition d'une nouvelle police nommée LearningCurveProRegular */
+    font-family: 'LearningCurveProRegular';
+    src: url('LearningCurve_OT-webfont.eot');
+    src: url('LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LearningCurve_OT-webfont.woff') format('woff'),
+         url('LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');
+}
+
+header
+{
+	background:url("images/090f640f5ecb607d3227ed8dd52b79f0_large - copy.jpeg") no-repeat top;
+	height:200px;
+	line-height: 200px;
+	
+}
+
+img
+{
+    max-width: 100%;
+}
+
+@media votre requete ici {
+    img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+		max-width: 100%;
+}
+
+}
+

@@ -1,0 +1,9 @@
+clf
+t=linspace(0,10,101);
+X0=3;
+V0=5;
+m=3;
+k=3;
+x=X0*sqrt(k/m)*cos(sqrt(k/m)*t)+V0*sqrt(m/k)*sin(sqrt(k/m))
+comet(t,x)
+plot2d(t,X0*sqrt(k/m)*cos(sqrt(k/m)*t)+V0*sqrt(m/k)*sin(sqrt(k/m)),6)

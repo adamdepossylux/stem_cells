@@ -1,0 +1,512 @@
+
+<!-- saved from url=(0053)http://www.apprendre-en-ligne.net/random/khideux.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Test du khi-deux</title>
+<link rel="stylesheet" href="./Test du khi-deux_files/style.css">
+<script language="JavaScript">
+
+function cadenas(reponse)
+{
+  if (reponse.charAt(6)==4) {document.location = "corriges/"+reponse+".html"}
+  else
+  document.location = "corriges/"+reponse+".nb"  
+}
+
+
+function x_calc() {
+var n = 0;
+var cs = 0;
+var x = 0;
+var y = 0;
+var sumobs = 0;
+var sumexp = 0;
+
+for (var i=0; i<15; i++) {
+	if (document.obs.elements[i].value.length > 0) {n=n+1}
+	}
+
+for (var i=0; i<n; i++) {
+	sumobs = sumobs*1+document.obs.elements[i].value*1;
+	}
+
+for (var i=0; i<n; i++) {
+	sumexp = sumexp*1+document.exp.elements[i].value*1;
+	}
+
+if (n<2) {alert("Vérifiez si vos données sont correctes.")};
+
+for (var i=0; i<n; i++) {
+	x =document.obs.elements[i].value;
+	y =document.exp.elements[i].value;
+	cs = cs*1+(((x-y)*(x-y))/y);
+	}
+cs = Math.round(100*cs)/100;
+var df = n-1;
+document.df.elements[0].value = df;
+
+if(df==1)
+{
+document.csqun.elements[0].value=cs;
+cs = 0;
+x =document.obs.elements[0].value;
+y =document.exp.elements[0].value;
+x = Math.abs(x-y);
+if(x>.5)
+{
+x = x-.5;
+x = x*x;
+cs = 1*cs+(x/y);
+cs = Math.round(100*cs)/100;
+}<!--end if-sub1-->
+
+x =document.obs.elements[1].value;
+y =document.exp.elements[1].value;
+x = Math.abs(x-y);
+if(x>.5)
+{
+x = x-.5;
+x = x*x;
+cs = 1*cs+(x/y);
+}<!--end if-sub1-->
+
+}<!--end if-main-->
+
+document.csq.elements[0].value = cs;
+
+document.s1.elements[0].value = sumobs;
+document.s2.elements[0].value = sumexp;
+
+if (sumobs != sumexp) {alert("Les sommes des valeurs observées et théoriques doivent être identiques. Vérifiez vos données.");
+document.csq.elements[0].value = "xxx";
+}
+
+if(df==1)
+{
+document.pa.elements[0].value = "3.84";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "6.64";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==2)
+{
+document.pa.elements[0].value = "5.99";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "9.21";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==3)
+{
+document.pa.elements[0].value = "7.82";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "11.35";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==4)
+{
+document.pa.elements[0].value = "9.49";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "13.28";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==5)
+{
+document.pa.elements[0].value = "11.07";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "15.09";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==6)
+{
+document.pa.elements[0].value = "12.59";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "16.81";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==7)
+{
+document.pa.elements[0].value = "14.07";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "18.48";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==8)
+{
+document.pa.elements[0].value = "15.51";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "20.09";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==9)
+{
+document.pa.elements[0].value = "16.92";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "21.77";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==10)
+{
+document.pa.elements[0].value = "18.31";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "23.21";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==11)
+{
+document.pa.elements[0].value = "19.68";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "24.73";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==12)
+{
+document.pa.elements[0].value = "21.03";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "26.22";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==13)
+{
+document.pa.elements[0].value = "22.36";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "27.69";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+if(df==14)
+{
+document.pa.elements[0].value = "23.69";
+if (cs < document.pa.elements[0].value) {
+ document.pb.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pb.elements[0].value="On rejette l'hypothèse"}
+document.pc.elements[0].value = "29.14";
+if (cs < document.pc.elements[0].value) {
+ document.pd.elements[0].value="On accepte l'hypothèse"}
+else {
+ document.pd.elements[0].value="On rejette l'hypothèse"}
+}
+
+}<!--end function-->
+
+function x_wipe() {
+for (var i=0; i<15; i++) {
+	document.obs.elements[i].value = "";
+	document.exp.elements[i].value = "";
+	}
+document.csq.elements[0].value = "";
+document.csqun.elements[0].value = "";
+document.df.elements[0].value = "";
+document.pa.elements[0].value = "";
+document.pb.elements[0].value = "";
+document.pc.elements[0].value = "";
+document.pd.elements[0].value = "";
+document.s1.elements[0].value = "";
+document.s2.elements[0].value = "";
+}
+
+
+</script>
+</head>
+<body background="./Test du khi-deux_files/fond.gif">
+<h2><a href="http://www.apprendre-en-ligne.net/random/index.html"><img align="absmiddle" src="./Test du khi-deux_files/logo.gif" width="92" height="34" border="0"></a> 
+  Test du khi deux</h2>
+<p align="JUSTIFY">
+Le test du <font face="Symbol">c</font><sup>2</sup> (prononcez khi deux ou khi carré) fournit une méthode pour déterminer la nature d'une répartition, qui peut être continue ou discrète. Nous nous occuperons ici de déterminer si une répartition est uniforme dans le cas discret.
+</p><p>
+<table>
+<tbody><tr>
+<td align="JUSTIFY">
+<h3>Méthode</h3>
+      <ol>
+        <li> On répartit les valeurs de l'échantillon (de taille n) dans <strong>k 
+          classes</strong> distinctes et on calcule les effectifs de ces classes. 
+          Il faut vérifier que pour les i de 1 à k, on a np<sub>i</sub>(1-p<sub>i</sub>) 
+          <img src="./Test du khi-deux_files/supegal.gif" width="9" height="9"> 5 (éventuellement 
+          répartir les valeurs autrement). Appelons o<sub>i</sub> (i=1,...,k) 
+          les effectifs observés et e<sub>i</sub> les effectifs théoriques.<br>
+          <br>
+        </li><li>On calcule <img align="Middle" src="./Test du khi-deux_files/Q.gif" width="115" height="51"><br>
+          La statistique Q donne une mesure de l'écart existant entre les effectifs 
+          théoriques attendus et ceux observés dans l'échantillon. En effet, plus 
+          Q sera grand, plus le désaccord sera important. La coïncidence sera 
+          parfaite si Q=0.<br>
+          <br>
+        </li><li>On compare ensuite cette valeur Q avec une valeur <img align="Middle" src="./Test du khi-deux_files/khi.gif" width="48" height="25"> 
+          issue d'un <a href="http://www.apprendre-en-ligne.net/random/tablekhi2.html">tableau</a> (voir extrait ci-contre) 
+          à la ligne k-1 et à la colonne <font face="Symbol" size="+1">a</font>. 
+          k-1 est le nombre de degrés de liberté et <font face="Symbol" size="+1">a</font> 
+          la tolérance.<br>
+          <br>
+        </li><li>Si Q &gt; <img align="Middle" src="./Test du khi-deux_files/khi.gif" width="48" height="25">, et 
+          si n est suffisamment grand, alors l'hypothèse d'avoir effectivement 
+          affaire à la répartition théorique voulue est à rejeter avec une probabilité 
+          d'erreur d'au plus <font face="Symbol" size="+1">a</font>. 
+      </li></ol>
+</td>
+<td width="20">
+</td>
+<td>
+<table border="" cellspacing="2" cellpadding="1">
+<tbody><tr>
+	<td></td>
+	<td></td>
+	<td bgcolor="#CC99FF" colspan="2" align="CENTER"><font face="Symbol" size="+1">a</font></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td bgcolor="#CC99FF">0.05</td>
+	<td bgcolor="#CC99FF">0.01</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999" rowspan="12" width="30">k-1</td>
+	<td bgcolor="#CC9999">1</td>
+	<td>3.84</td>
+	<td>6.64</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">2</td>
+	<td>5.99</td>
+	<td>9.21</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">3</td>
+	<td>7.82</td>
+	<td>11.35</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">4</td>
+	<td>9.49</td>
+	<td>13.28</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">5</td>
+	<td>11.07</td>
+	<td>15.09</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">6</td>
+	<td>12.59</td>
+	<td>16.81</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">7</td>
+	<td>14.07</td>
+	<td>18.48</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">8</td>
+	<td>15.51</td>
+	<td>20.09</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">9</td>
+	<td>16.92</td>
+	<td>21.67</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">10</td>
+	<td>18.31</td>
+	<td>23.21</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">11</td>
+	<td>19.68</td>
+	<td>24.73</td>
+</tr>
+<tr>
+	<td bgcolor="#CC9999">12</td>
+	<td>21.03</td>
+	<td>26.22</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table border="0" cellspacing="5">
+<tbody><tr>
+<td align="JUSTIFY">
+<h5>Exemple</h5>
+On a lancé un dé 90 fois et on a obtenu les issues 1 à 6 (k=6) avec les effectifs 
+      suivants: 12, 16, 20, 11, 13, 18 (on a vérifié que 90 lancers 
+      sont suffisants: n(1/6)(5/6) <img src="./Test du khi-deux_files/supegal.gif" width="9" height="9"> 
+      5 implique que n <img src="./Test du khi-deux_files/supegal.gif" width="9" height="9"> 
+      36). <br>
+      Si le dé n'est pas pipé (notre hypothèse), on attend comme effectifs moyens 
+      théoriques 15 pour toutes les issues. 
+      <p>
+</p><center><img align="Middle" src="./Test du khi-deux_files/Qex.gif" width="478" height="38"></center>
+<p>
+Pour k-1=5 degrés de liberté et un seuil de tolérance de 5%, la valeur <img align="Middle" src="./Test du khi-deux_files/khi.gif" width="48" height="25"> du tableau est 11.1. Cela signifie que la probabilité que Q soit supérieur à 11.1 est de 5% (voir figure ci-contre). Comme 4.266 &lt; 11.1, on accepte l'hypothèse selon laquelle le dé est régulier.
+</p></td>
+<td align="CENTER" bgcolor="#CCFFFF"><img src="./Test du khi-deux_files/distrkhi2.gif" width="250" height="154" hspace="8"><br>
+Fonction de répartition de la loi du <font face="Symbol" size="+1">c</font><sup>2</sup> pour 5 degrés de liberté.
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><hr>
+<a name="javascript"><h3>Programme javascript</h3></a>
+<p>
+<table>
+<tbody><tr>
+    <td width="208"> 
+      <table border="0" cellspacing="1" cellpadding="4" bgcolor="#CCCC99" background="./Test du khi-deux_files/marbre.jpg">
+        <tbody><tr>
+	<td><b><center>Catégorie</center></b></td>
+	<td><b><center>Observé</center></b></td>
+	<td><b><center>Théorique</center></b></td>
+</tr>
+<tr>
+	<td align="CENTER"><form name="cat"><input type="Text" size="2" value=" A"><br><input type="Text" size="2" value=" B"><br><input type="Text" size="2" value=" C"><br><input type="Text" size="2" value=" D"><br><input type="Text" size="2" value=" E"><br><input type="Text" size="2" value=" F"><br><input type="Text" size="2" value=" G"><br><input type="Text" size="2" value=" H"><br><input type="Text" size="2" value=" I"><br><input type="Text" size="2" value=" J"><br><input type="Text" size="2" value=" K"><br><input type="Text" size="2" value=" L"><br><input type="Text" size="2" value=" M"><br><input type="Text" size="2" value=" N"><br><input type="Text" size="2" value=" O"></form></td>
+	<td align="CENTER"><form name="obs"><input type="Text" size="8" value="12"><br><input type="Text" size="8" value="16"><br><input type="Text" size="8" value="20"><br><input type="Text" size="8" value="11"><br><input type="Text" size="8" value="13"><br><input type="Text" size="8" value="18"><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""></form></td>
+	<td align="CENTER"><form name="exp"><input type="Text" size="8" value="15"><br><input type="Text" size="8" value="15"><br><input type="Text" size="8" value="15"><br><input type="Text" size="8" value="15"><br><input type="Text" size="8" value="15"><br><input type="Text" size="8" value="15"><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""><br><input type="Text" size="8" value=""></form></td>
+</tr>
+<tr>
+	<td valign="top"><b>Sommes:</b></td>
+	<td align="CENTER"><form name="s1"><input type="Text" size="8"></form></td>
+	<td align="CENTER"><form name="s2"><input type="Text" size="8"></form></td>
+</tr>
+<tr align="CENTER">
+	<td></td>
+	<td><form name="calc"><input type="Button" value="Calculer" onclick="x_calc()"></form></td>
+	<td><form name="wipe"><input type="Button" value="Effacer" onclick="x_wipe()"></form></td>
+</tr>
+</tbody></table>
+</td>
+    <td width="62"> </td>
+    <td width="681"> 
+      <table border="0" cellspacing="1" cellpadding="5">
+        <tbody><tr>
+          <td width="270">[Notez que si k-1 = 1, la valeur du khi 
+            deux est corrigée pour la continuité.]</td>
+          <td width="270">[Pour k-1 = 1, valeur du khi deux <b>sans</b> 
+            correction de continuité.]</td>
+</tr><tr>
+          <td width="278"> 
+            <form name="csq">khi deux = <input type="Text" size="7">
+            </form></td>
+          <td width="266"> 
+            <form name="csqun">khi deux = <input type="Text" size="7"></form></td>
+</tr>
+</tbody></table>
+<br>
+<form name="df">
+        &nbsp;Valeurs critiques du khi deux pour 
+        <input type="Text" size="2"> degrés de liberté:</form>
+        
+      <table border="0" cellspacing="1" cellpadding="4">
+        <tbody><tr align="Center">
+<td><font face="Symbol" size="+1">a</font></td>
+<td>Seuils</td>
+<td>Verdict</td>
+</tr>
+<tr>
+            <td><b>
+              0.05</b></td>
+            <td><br>
+              <form name="pa"><input type="Text" size="6"></form>
+			</td>
+			<td> <br>
+			  <form name="pb"><input style="background-color:#CCFFCC" type="Text" size="26"></form>
+            </td>
+</tr>
+<tr>
+<td valign="top"><b>0.01</b></td>
+<td><form name="pc"><input type="Text" size="6"></form></td>
+<td><form name="pd"><input style="background-color:#CCFFCC" type="Text" size="26"></form></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><p align="JUSTIFY">
+</p><hr>
+<table border="0" cellspacing="2" cellpadding="1" width="100%">
+<tbody><tr>
+	<td><a href="http://www.apprendre-en-ligne.net/random/index.html"><img src="./Test du khi-deux_files/back.gif" width="45" height="45" border="0"></a></td>
+	<td align="CENTER"><img align="Middle" src="./Test du khi-deux_files/wilec.gif" border="0"><font size="1">Didier 
+      Müller, 30.12.02</font></td>
+</tr>
+</tbody></table>
+
+
+</body></html>

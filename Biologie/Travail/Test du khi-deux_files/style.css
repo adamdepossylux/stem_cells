@@ -1,0 +1,57 @@
+body	{ color: #000022; font-weight: normal; font-size: 11px; font-family: Verdana, Arial;  text-align: justify; margin: 2ex }
+
+h1 {
+    color:                  #E00000;
+    font-family:            "TrashHandRegular";
+    font-size:              400%;
+    line-height:            1.1em;
+}
+
+h2 {
+    color:                  #000066;
+    font-family:            "TrashHandRegular";
+    font-size:              250%;
+    line-height:            1.1em;
+}
+
+h3	{ color: #BB0000; font-style: normal; font-weight: bold; font-size: 16px; line-height: 16px; font-family: Verdana, sans-serif}
+
+h4	{ color: #000066; font-style: normal; font-weight: demi-bold; font-size: 13px; line-height: 13px; font-family: Verdana, sans-serif }
+
+h5	{ color: #CC6600; font-style: normal; font-weight: demi-bold; font-size: 13px; line-height: 13px; font-family: Verdana, sans-serif }
+
+h6	{ color: #660066; font-style: normal; font-weight: bold; font-size: 11px; line-height: 11px; font-family: Verdana, sans-serif }
+
+a:link	{ color: navy; font-weight: normal; font-size: 11px; font-family:  Verdana, Arial, sans-serif }
+
+a:vlink	{ color: #000099; font-weight: normal; font-size: 11px; font-family: Verdana, Arial, sans-serif }
+
+a:hover { color: #229933; font-weight: normal; font-size: 11px; font-family: Verdana, Arial, sans-serif }
+
+td	{ color: #000000; font-weight: normal; font-size: 11px; font-family: Verdana, Arial, sans-serif }
+
+pre	{ color: #000022; font-weight: normal; font-size: 12px; font-family: Courier, Courier New, monospace }
+
+strong {color: #000022; font-weight: normal; font-size: 11px; background: #33FF99}
+
+sup {font-size: 11 px} 
+
+sub {font-size: 11 px} 
+
+hr { color: #000022; height: 1pt}
+
+caption { color: #660066; font-style: normal; font-weight: bold; font-size: 11px; line-height: 14px; font-family: Verdana, sans-serif }
+
+th {  font-size: 11px; font-weight: bold}
+
+@font-face {
+    font-family: 'TrashHandRegular';
+    src: url('font/TrashHand-webfont.eot');
+    src: url('font/TrashHand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/TrashHand-webfont.woff') format('woff'),
+         url('font/TrashHand-webfont.ttf') format('truetype'),
+         url('font/TrashHand-webfont.svg#TrashHandRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

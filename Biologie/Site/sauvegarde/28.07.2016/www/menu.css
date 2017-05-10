@@ -1,0 +1,39 @@
+body
+{
+	background-color:green;
+	font-size:xx-large;
+	height:100px;
+	line-height: 200px;
+}
+
+div
+{
+	background: silver; 
+	text-align: center; 
+	margin:auto;
+	height:100px;
+	line-height: 200px;
+	font-size:xx-large;
+}
+
+a
+{
+	font-size:xx-large;
+}
+
+#conteneur
+{
+	display: flex;
+	flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+	height: 50px;
+	margin:auto;
+}
+
+h1
+{
+	text-align: center; 
+	margin:auto;
+	font-family: "LearningCurveProRegular","Comic Sans MS", "Trebuchet MS",sans-serif;
+}

@@ -1,0 +1,9 @@
+clf
+x=linspace(0,10,101);
+x0=0;
+v0=5;
+k=3;
+m=3;
+g=1;
+y=((2*m*v0)/sqrt(4*m*k-g^2))*sin(((sqrt(4*m*k-g^2)/(2*m)*x))).*exp(-g/(2*m)*x);
+plot2d(x,y);

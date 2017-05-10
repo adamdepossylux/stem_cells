@@ -1,0 +1,352 @@
+
+/*bloc page*/
+
+div
+{
+	width:100%;
+	
+}
+
+body
+{
+	background: url("images/stem-cell-11.jpg") fixed;
+	background-size:cover;
+	margin:auto;
+}
+
+#bloc_page
+{
+	display: flex;
+	flex-direction: column;
+	flex-wrap:nowrap;
+	flex-content: space-around;
+    	width: auto;
+}
+
+/*Header*/
+
+h1
+{
+	color:white;
+	font-size: xx-large;
+	font-family: "LearningCurveProRegular","Comic Sans MS", "Trebuchet MS",sans-serif;
+	text-align: center;
+	margin: auto;
+}
+
+header
+{
+
+	background:url("images/090f640f5ecb607d3227ed8dd52b79f0_large - 	copy.jpeg") no-repeat top;
+	height:200px;
+	line-height: 200px;
+}
+
+
+
+/*menu*/
+
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: silver;
+  color: #fff;
+  width: 100%;
+  font: 1.2em "Trebuchet MS", sans-serif;
+}
+.navigation a, .navigation span {
+  display: block;
+  padding: 4px 10px;
+  color: #fff;
+  text-decoration: none;
+  background: #000 url(menu-item.png) left bottom no-repeat;
+}
+.navigation .toggleSubMenu a, .navigation .toggleSubMenu span {
+  background-image: url(menu-item-deroule.png);
+}
+.navigation .open a, .navigation .open span {
+  background-image: url(menu-item-enroule.png);
+}
+.navigation a:hover, .navigation a:focus, .navigation a:active {
+  text-decoration: underline;
+}
+.navigation .subMenu {
+  font-size: .8em;
+  background: #ccc url(subMenu.png) 0 0 repeat-x;
+  font-size: .9em;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #666;
+}
+.navigation ul.subMenu a {
+
+  background: none;
+  padding: 3px 20px;
+}
+
+
+/*corps*/
+
+h2
+{
+	color:lime;
+	font-size: x-large;
+	font-family: "Comic Sans MS", "Trebuchet MS",sans-serif;
+	text-align: center;
+	Line-Height: 2;
+}
+
+h3
+{
+	color:maroon;
+	font-size: x-large;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 95%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+h4
+{
+	color:blue;
+	font-size: large;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 90%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+h5
+{
+	color:navy;
+	font-size: medium;
+	font-family: Georgia,sans-serif;
+	text-align: left;
+	width: 80%;
+	margin:auto;
+	Line-Height: 2;
+}
+
+
+p
+{
+	font-size: medium;
+	font-family:Arial,sans-serif;
+	text-align: justify;
+	width: 98%;
+	margin: auto;
+	Line-Height: 1.2;
+}
+
+strong
+{
+	font-weight: bold;
+	text-align: justify;
+}
+
+form
+{
+	font-size: medium;
+	font-family:Arial,sans-serif;
+	text-align: justify;
+	width: 98%;
+	margin: auto;
+	Line-Height: 1.2;
+}
+
+span
+{
+	font-family: Georgia,sans-serif;
+	color:blue;
+	font-size: medium;
+	font-weight: bold;
+}
+
+a
+{
+	text-decoration: none;
+	color:olive;
+	text-align: justify;
+}
+
+
+ul
+{
+	font-size: medium;
+	font-family:Arial,sans-serif;
+	text-align: justify;
+	margin:auto;
+}
+
+
+
+
+section
+{
+	background-size:cover;
+	margin:auto;
+	border-radius: 50px;
+	width: 90%;
+	background-color: white;
+}
+
+
+
+img
+{
+    max-width: 100%;
+}
+
+
+.imageflottante
+{
+	float:left;
+}
+
+/*footer*/
+
+footer div
+{
+	background-color: transparent;
+	width:8%;
+	text-align:left;
+	border-radius: 2px;
+	margin-left: 20px;
+	border-radius: 2px;
+	min-width: 100px;
+}
+
+footer div2 
+{
+	background: green;  
+	font-size:12px; 
+	margin-right: 20px;
+	border-radius: 2px;
+	width:40px;
+}
+
+footer div2 a
+{
+	color:black;
+	text-decoration: none;
+	text-align: right;
+	font-size: small;
+}
+
+script
+{
+	text-align:right; 
+	font-size:5px;
+}
+
+footer
+{
+	background-color: lightblue;
+	position: fixed;
+	bottom:0;
+	width:100%;
+}
+
+
+#bloc_footer
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:nowrap;
+	height: 4%;
+    	align-items: center;
+}
+
+#conteneur_fr
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:nowrap;
+	height: auto;
+}
+
+@font-face { /* Définition d'une nouvelle police nommée LearningCurveProRegular */
+    font-family: 'LearningCurveProRegular';
+    src: url('LearningCurve_OT-webfont.eot');
+    src: url('LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LearningCurve_OT-webfont.woff') format('woff'),
+         url('LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');
+}
+
+img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video, textarea {
+    max-width: 100%;
+
+}
+
+@media (max-width: 800px) {
+
+img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video, textarea {
+    max-width: 100%;
+}
+
+/*Header*/
+
+h1
+{
+	color:white;
+	font-size: xx-large;
+	font-family: "LearningCurveProRegular","Comic Sans MS", "Trebuchet MS",sans-serif;
+	line-height:50px;
+}
+
+header
+{
+	background:url("images/090f640f5ecb607d3227ed8dd52b79f0_large - copy.jpeg") no-repeat top;
+}
+
+#header
+{
+    display: flex;
+	
+}
+/*menu*/
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: silver;
+  color: #fff;
+  width: 100%;
+  font: 1.2em "Trebuchet MS", sans-serif;
+}
+.navigation a, .navigation span {
+  display: block;
+  padding: 4px 10px;
+  color: #fff;
+  text-decoration: none;
+  background: #000 url(menu-item.png) left bottom no-repeat;
+}
+.navigation .toggleSubMenu a, .navigation .toggleSubMenu span {
+  background-image: url(menu-item-deroule.png);
+}
+.navigation .open a, .navigation .open span {
+  background-image: url(menu-item-enroule.png);
+}
+.navigation a:hover, .navigation a:focus, .navigation a:active {
+  text-decoration: underline;
+}
+.navigation .subMenu {
+  font-size: .8em;
+  background: #ccc url(subMenu.png) 0 0 repeat-x;
+  font-size: .9em;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #666;
+}
+.navigation ul.subMenu a {
+  background: none;
+  padding: 3px 20px;
+}
+
+}

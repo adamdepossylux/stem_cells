@@ -1,0 +1,28 @@
+----- Ce texte est à effacer (après lecture si c’est votre première visite) -----
+
+Bienvenue sur Framapad !
+
+Ce service s’inscrit dans le réseau associatif Framasoft qui propose un ensemble de sites et de projets autour du logiciel libre, sa culture et son état d’esprit.
+
+Le principe est simple. On renseigne son nom, ou son pseudo, en cliquant sur l’icône « utilisateur » en haut à droite (la couleur peut être changée) et... on se lance ensemble dans l’édition ! Les contributions de chacun se synchronisent « en temps réel » sous leur propre couleur et le texte est automatiquement sauvegardé.
+
+Si vous souhaitez marquer une version, il suffit de cliquer sur l’icône « étoile ». Depuis l’historique (icône « horloge »), vous retrouverez alors toutes les versions du texte dont celles plus importantes marquées donc d’une étoile.
+Besoin de communiquer sur le texte avec vos collaborateurs ? Vous trouverez une fenêtre de tchat en bas à droite dans laquelle vous pourrez poster vos messages.
+Pour importer et exporter votre texte, il y a évidemment le copier/coller mais aussi les formats HTML, texte brut, PDF, ODF... (icône « double flèche »).
+
+Important : N’oubliez pas de conserver quelque part l’adresse web (URL) de votre pad.
+
+Bon travail collaboratif :)
+
+Merci pour votre attention et votre confiance.
+
+----- Ce texte est à effacer (après lecture si c’est votre première visite) -----
+
+**ATTENTION**
+CETTE INSTANCE PROPOSE DES PADS À EFFACEMENT AUTOMATIQUE !
+VOS PADS SERONT AUTOMATIQUEMENT SUPPRIMÉS AU BOUT DE 62 JOURS (2 MOIS) SANS ÉDITION !
+
+M.r le président, je vous fais une lettre
+que vous lirez p
+
+
